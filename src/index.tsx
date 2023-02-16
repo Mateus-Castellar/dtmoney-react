@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { createServer, Model } from "miragejs";
 import { App } from "./App";
+import React from "react";
 
 createServer({
   models: {
@@ -12,19 +13,27 @@ createServer({
       transactions: [
         {
           id: 1,
-          title: "Freelance Web Site",
+          title: "Freelance WebSite",
           type: "deposit",
-          category: "dev",
-          amount: 5000,
-          createdAt: new Date("2023-01-28 08:00:00"),
+          category: "Desenvolvimento",
+          amount: 6500,
+          createdAt: new Date("2023-01-10 08:00:00"),
         },
         {
           id: 2,
-          title: "Aluguel",
+          title: "Pagamento Aluguel",
           type: "withdraw",
-          category: "casa",
-          amount: 1200,
-          createdAt: new Date("2023-01-28 08:00:00"),
+          category: "Pagamento",
+          amount: 935,
+          createdAt: new Date("2023-01-05 08:00:00"),
+        },
+        {
+          id: 3,
+          title: "Venda periféricos usados",
+          type: "deposit",
+          category: "Venda",
+          amount: 480,
+          createdAt: new Date("2023-02-04 08:00:00"),
         },
       ],
     });
@@ -49,7 +58,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  // <React.StrictMode>
-  <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
